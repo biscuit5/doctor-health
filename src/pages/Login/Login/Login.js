@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 
 import login from '../../../images/login.png';
 import React, { useState } from 'react';
-import { NavLink,useLocation,useHistory } from 'react-router-dom';
+import { NavLink,useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 
 
@@ -15,7 +15,7 @@ const Login = () => {
 	const [loginData,setLoginData] = useState({})
 
 	const location = useLocation();
-	const history = useHistory()
+	const Navigate = useNavigate()
 	const handleOnBLUR = e =>{
 		
 		const field = e.target.name;
@@ -25,11 +25,11 @@ const Login = () => {
 		setLoginData(newLoginData)
 	}
 	const handleLoginSubmit = e =>{
-		loginUser(loginData.email,loginData.password,location,history)
+		loginUser(loginData.email,loginData.password,location,Navigate)
 		e.preventDefault()
 	}
 	const handleGoogleSign = ()=>{
-		signInGoogle(location,history)
+		signInGoogle(location,Navigate)
 	}
 	return (
 		<Container>

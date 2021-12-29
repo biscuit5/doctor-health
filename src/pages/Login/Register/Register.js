@@ -7,15 +7,15 @@ import Button from '@mui/material/Button';
 import login from '../../../images/login.png';
 import React, { useState } from 'react';
 
-import { NavLink,useHistory } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 
 const Register = () => {
 	const {user,registerUser,isLoading,authError} = useAuth()
 	const [loginData,setLoginData] = useState({})
-	const history = useHistory()
+	const history = useNavigate()
 	const handleOnBLUR = e =>{
-		
+	
 		const field = e.target.name;
 		const value = e.target.value;
 		const newLoginData = {...loginData}

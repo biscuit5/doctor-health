@@ -12,7 +12,7 @@ const DashboardHome = () => {
 		  <Calender
 		  date={date}
 		  setDate={setDate}
-		  
+		 
 		  ></Calender>
 		</Grid>
 		<Grid item xs={12} sm ={7}>

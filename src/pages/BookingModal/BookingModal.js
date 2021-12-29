@@ -45,7 +45,7 @@ const BookingModal = ({openBooking,booking,handleCloseBooking,date,setBookingSuc
 			date:date.toDateString()
 		}
 		
-		fetch('http://localhost:5000/appointments',{
+		fetch('https://ancient-cliffs-95012.herokuapp.com/appointments',{
 			method: 'POST',
 			headers:{
 				'content-type':'application/json'

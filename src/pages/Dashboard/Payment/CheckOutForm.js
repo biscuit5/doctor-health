@@ -13,7 +13,7 @@ const CheckOutForm = ({appointment}) => {
 	const [error,setError]= useState('');
 	const [processing,setProcessing] = useState(false);
 	useEffect(()=>{
-		fetch('http://localhost:5000/create-payment-intent',{
+		fetch('https://ancient-cliffs-95012.herokuapp.com/create-payment-intent',{
 			method:'POST',
 			headers:{
 				'content-type':'application/json'
